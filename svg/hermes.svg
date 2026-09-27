@@ -1,0 +1,64 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="512" height="512" viewBox="0 0 512 512">
+  <defs>
+    <radialGradient id="bg" cx="50%" cy="42%" r="72%">
+      <stop offset="0%" stop-color="#0E1A22"/>
+      <stop offset="55%" stop-color="#080F15"/>
+      <stop offset="100%" stop-color="#05090C"/>
+    </radialGradient>
+    <linearGradient id="cyan" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#7FE8DC"/>
+      <stop offset="45%" stop-color="#4FD1C5"/>
+      <stop offset="100%" stop-color="#2A9D8F"/>
+    </linearGradient>
+    <linearGradient id="violet" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#8B7CF6"/>
+      <stop offset="100%" stop-color="#6D5AE6"/>
+    </linearGradient>
+    <filter id="glowC" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="6" result="b"/>
+      <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+    <filter id="glowV" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="5" result="b"/>
+      <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+    <clipPath id="circle"><circle cx="256" cy="256" r="256"/></clipPath>
+  </defs>
+  <g clip-path="url(#circle)">
+    <rect width="512" height="512" fill="url(#bg)"/>
+
+    <!-- cincin orbit -->
+    <circle cx="256" cy="256" r="198" fill="none" stroke="url(#violet)" stroke-width="2" opacity="0.4"/>
+    <path d="M 256 58 A 198 198 0 0 1 454 256" fill="none" stroke="url(#cyan)" stroke-width="4"
+          stroke-linecap="round" filter="url(#glowC)"/>
+
+    <!-- SAYAP KIRI (3 lapis) -->
+    <g fill="none" stroke="url(#cyan)" stroke-linecap="round" filter="url(#glowC)">
+      <path d="M 196 200 C 130 178, 96 208, 84 250 C 120 240, 160 236, 196 244" stroke-width="11"/>
+      <path d="M 196 244 C 140 240, 106 268, 96 306 C 132 292, 168 282, 196 284" stroke-width="9" opacity="0.85"/>
+      <path d="M 200 286 C 156 292, 130 320, 128 352 C 158 332, 184 318, 204 318" stroke-width="7" opacity="0.7"/>
+    </g>
+    <!-- SAYAP KANAN (cermin) -->
+    <g fill="none" stroke="url(#cyan)" stroke-linecap="round" filter="url(#glowC)">
+      <path d="M 316 200 C 382 178, 416 208, 428 250 C 392 240, 352 236, 316 244" stroke-width="11"/>
+      <path d="M 316 244 C 372 240, 406 268, 416 306 C 380 292, 344 282, 316 284" stroke-width="9" opacity="0.85"/>
+      <path d="M 312 286 C 356 292, 382 320, 384 352 C 354 332, 328 318, 308 318" stroke-width="7" opacity="0.7"/>
+    </g>
+
+    <!-- KADUKEUS (tongkat + ular) -->
+    <line x1="256" y1="140" x2="256" y2="380" stroke="url(#cyan)" stroke-width="10"
+          stroke-linecap="round" filter="url(#glowC)"/>
+    <!-- ular melingkar -->
+    <path d="M 256 190 C 292 200, 292 232, 256 242 C 220 252, 220 284, 256 294 C 292 304, 292 336, 256 346"
+          fill="none" stroke="url(#violet)" stroke-width="8" stroke-linecap="round" filter="url(#glowV)"/>
+    <!-- bola di puncak -->
+    <circle cx="256" cy="132" r="15" fill="url(#cyan)" filter="url(#glowC)"/>
+    <circle cx="256" cy="132" r="6" fill="#05090C"/>
+
+    <!-- titik node -->
+    <circle cx="256" cy="58"  r="8" fill="url(#cyan)"  filter="url(#glowC)"/>
+    <circle cx="454" cy="256" r="7" fill="#8B7CF6"     filter="url(#glowV)"/>
+    <circle cx="256" cy="454" r="6" fill="#4FD1C5"     opacity="0.8"/>
+    <circle cx="58"  cy="256" r="5" fill="#6D5AE6"     opacity="0.75"/>
+  </g>
+</svg>

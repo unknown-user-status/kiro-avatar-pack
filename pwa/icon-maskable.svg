@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+  <defs><linearGradient id="g" x1="0%" y1="0%" x2="100%" y2="100%">
+    <stop offset="0%" stop-color="#F5DFA4"/><stop offset="45%" stop-color="#E8C87A"/><stop offset="100%" stop-color="#C9A44C"/>
+  </linearGradient></defs>
+  <rect width="512" height="512" fill="#07070C"/>
+  <!-- konten dalam safe zone 80% (maskable) -->
+  <g transform="translate(256,256) scale(0.62) translate(-256,-256)">
+    <path d="M 208 178 L 208 334" stroke="url(#g)" stroke-width="17" stroke-linecap="round"/>
+    <path d="M 208 258 L 300 178" stroke="url(#g)" stroke-width="17" stroke-linecap="round"/>
+    <path d="M 208 258 L 302 334" stroke="url(#g)" stroke-width="17" stroke-linecap="round"/>
+    <circle cx="322" cy="196" r="6.5" fill="#8B7CF6"/>
+  </g>
+</svg>
